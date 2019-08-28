@@ -46,7 +46,7 @@ class SingleNews extends React.Component{
                     <div className="active-news">
                         <h3 className="active-news__title">{singleNews.webTitle}</h3>
 
-                        <img className="active-news__img" src='https://media.guim.co.uk/47b97e8ea25ddb7b8ea7f86deb40a577b26d5b11/0_89_3552_2132/500.jpg' alt={singleNews.title} />
+                        <img className="active-news__img" src={singleNews.fields.thumbnail} alt={singleNews.title} />
                         <h4 className="active-news__publisher">
                             Category: <span>{singleNews.sectionName}</span>
                         </h4>

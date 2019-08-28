@@ -19,7 +19,7 @@ class News extends React.Component{
                 { this.props.news.map((singleNews, index) => {
                     return (
                         <div key={index} className="news__box" style={{marginBottom: "2rem"}}>
-                            <img className="news__box-img" src="https://media.guim.co.uk/47b97e8ea25ddb7b8ea7f86deb40a577b26d5b11/0_89_3552_2132/500.jpg" alt="" />
+                            <img className="news__box-img" src={singleNews.fields.thumbnail} alt="" />
                             <div className="news__text">
                                 <h5 className="news__title">{singleNews.webTitle}</h5>
                                 <p className="news__subtitle"><strong>Category:</strong> <span>

@@ -34,7 +34,7 @@ class App extends React.Component {
             localStorage.setItem('currentNewsTitle', JSON.stringify(currentPageTitle))
 
             if(storedPageTitle !== currentPageTitle){
-                alert("New News For You!")
+                // alert("New News For You!")
                 localStorage.setItem('currentNewsTitle', JSON.stringify(currentPageTitle))
             }
         }, 30000);
@@ -68,8 +68,7 @@ class App extends React.Component {
     loadNews = () => {
         const { page, news } = this.state
         const API_KEY = "124505e0-8351-46ff-bb44-d3f4d14ec4ea"
-        const URL = `https://cors-anywhere.herokuapp.com/http://content.guardianapis.com/sport?edition=uk&show-fields=all
-        &page=${page}&api-key=${API_KEY}`
+        const URL = `https://cors-anywhere.herokuapp.com/http://content.guardianapis.com/sport?edition=uk&show-fields=all&page=${page}&api-key=${API_KEY}`
 
         axios.get(URL)
             .then(res => {
